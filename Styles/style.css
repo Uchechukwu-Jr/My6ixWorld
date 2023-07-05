@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #0e0f0f;
+    color: white;
+}
+/* Center the loader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #173d1b;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #dbf5de;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #4FCE5D;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1.5s;
+    animation-name: animatebottom;
+    animation-duration: 1.5s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
+.header {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #0e0f0f;
+    z-index: 9999;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Rest of the CSS styles */
+
+.menu-button {
+    cursor: pointer;
+    font-size: 50px;
+    margin-left: 10px;
+    color: #4FCE5D;
+}
+
+.logo-container {
+    text-align: right;
+    flex-grow: 1;
+    font-size: 35px;
+    width: 70%;
+    margin-left: 10px;
+}
+.logo-1 {
+    text-decoration: underline wavy #4FCE5D;
+}
+.logo-2 {
+    text-decoration: overline white;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* Initial position outside the screen */
+    height: 100vh;
+    width: 300px;
+    background-color: #0e0f0f;
+    transition: left 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+.menu.open {
+    left: 0;
+    /* Slides into view when opened */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+}
+
+nav ul li {
+    padding: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #4FCE5D;
+    font-size: 20px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .menu {
+        width: 50%;
+        left: -50%;
+    }
+}
+/* Existing CSS styles */
+
+.close-button {
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #4FCE5D;
+}
+.input-button {
+    margin: 10px;
+}
+.search-bar-container {
+    margin-top: 100px;
+}
+.search-bar {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #4FCE5D;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #0e0f0f;
+    padding: 12px;
+    color: #4FCE5D;
+}
+.footer-bottom {
+    background: #0e0f0f;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+.footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+/*Main page*/
+
+.main {
+    margin-top: 60px;
+}
+
+.products-grid {
+    display: grid;
+
+    /* - In CSS Grid, 1fr means a column will take up the
+       remaining space in the grid.
+     - If we write 1fr 1fr ... 1fr; 8 times, this will
+       divide the grid into 8 columns, each taking up an
+       equal amount of the space.
+     - repeat(8, 1fr); is a shortcut for repeating "1fr"
+       8 times (instead of typing out "1fr" 8 times).
+       repeat(...) is a special property that works with
+       display: grid; */
+    grid-template-columns: repeat(8, 1fr);
+}
+
+/* @media is used to create responsive design (making the
+   website look good on any screen size). This @media
+   means when the screen width is 2000px or less, we
+   will divide the grid into 7 columns instead of 8. */
+@media (max-width: 2000px) {
+    .products-grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 6 columns. */
+@media (max-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1300px) {
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1000px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-container {
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    border-right: 1px solid rgb(231, 231, 231);
+    border-bottom: 1px solid rgb(231, 231, 231);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.product-image {
+    /* Images will overflow their container by default. To
+    prevent this, we set max-width and max-height to 100%
+    so they stay inside their container. */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-name {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.product-rating-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-rating-stars {
+    width: 100px;
+    margin-right: 6px;
+}
+
+.product-rating-count {
+    color: rgb(1, 124, 182);
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.product-price {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-quantity-container {
+    margin-bottom: 17px;
+}
+
+.product-spacer {
+    flex: 1;
+}
+
+.add-to-cart-button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 10px;
+    border: solid #4FCE5D;
+    color: #4FCE5D;
+    transition: 0.5s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #4FCE5D;
+    color: white;
+    border: solid white;
+}
+
+.search-products {
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/*Footer*/
+.footer-Father {
+    background-color: black;
+    padding: 10px;
+}
+/* CSS for the two-column layout on big screens */
+@media screen and (min-width: 768px) {
+    .column {
+        width: 50%;
+        float: left;
+    }
+}
+
+/* CSS for the single-column layout on small screens */
+@media screen and (max-width: 767px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.footer-list li {
+    margin: 5px;
+}
+.footer-list a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.column h3 {
+    color: #4FCE5D;
+    font-size: 26px;
+    font-family: "Times New Roman", Times, serif;
+}
+/* LOAD MORE BUTTON */
+.load-more-button {
+  /* CSS rules for the Load More button */
+    width: 100%;
+    padding: 10px;
+}
