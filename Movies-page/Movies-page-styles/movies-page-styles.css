@@ -1,0 +1,63 @@
+ .movie {
+     margin-top: 120px;
+     width: 100%;
+ }
+ .movie-banner {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-content: center;
+ }
+.product-image {
+    width: 90%;
+    margin: auto;
+}
+.download-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 21px;
+    border-radius: 10px;
+    margin: auto;
+    border: 1px solid green;
+    transition: 0.8s;
+}
+.download-button:hover {
+    background-color: green;
+    color: white;
+    transform: scale(0.7);
+    border: 1px solid white;
+}
+.movie-name {
+    color: #4FCE5D;
+    font-weight: 900;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: "Times New Roman", Times, serif;
+}
+.movie-details {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+}
+.movie-genre {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+}
+.trailer {
+    width: 100%;
+    margin-bottom: 35px;
+}
+.trailer-h2 {
+    text-align: center;
+    font-size: 21px;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+    text-decoration: underline #4FCE5D;
+}
+.trailer iframe {
+    width: 100%;
+}
